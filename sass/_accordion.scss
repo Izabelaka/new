@@ -1,0 +1,74 @@
+@use "./colors" as colors;
+
+.accordion {
+	&__box {
+		font-size: 2rem;
+	}
+
+	&__btn {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 2.5rem;
+		width: 100%;
+		font-size: 1.8rem;
+		text-align: left;
+		border: none;
+		cursor: pointer;
+		transition: background-color 0.3s;
+		color: white;
+		background-color: colors.$secondColor;
+		text-transform: uppercase;
+		transition: color 0.8s ease;
+	}
+	&__btn:hover,
+	&__btn:focus {
+		background-color: colors.$pink;
+		color: white;
+		outline: none;
+	}
+
+	&__text-box {
+		margin-left: 10px;
+		padding: 1rem 2rem;
+		display: none;
+		color: colors.$text;
+	}
+	&__icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50px;
+		height: 50px;
+		position: relative;
+
+		&__first {
+			background-color: white;
+			position: absolute;
+			height: 5px;
+			width: 30px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			transition: transform 0.5s ease;
+		}
+		&__second {
+			background-color: white;
+			position: absolute;
+			width: 5px;
+			height: 30px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			transition: transform 0.5s ease;
+		}
+	}
+
+	&__active {
+		display: block;
+	}
+}
+
+.rotate {
+	transform: translate(-50%, -50%) rotate(90deg);
+}

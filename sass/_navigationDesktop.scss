@@ -1,0 +1,62 @@
+@use "./colors" as colors;
+
+@media (min-width: 768px) {
+	.navigationDesktop {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		z-index: 10000;
+		height: 6rem;
+		background-color: colors.$text;
+		font-size: 1.5rem;
+
+		&__socials {
+			position: absolute;
+			left: 2rem;
+			gap: 2rem;
+			display: flex;
+		}
+		&__socials a:hover,
+		&__contact a:hover {
+			color: colors.$pink;
+		}
+		&__socials a,
+		&__contact a {
+			transition: color 0.8s ease;
+		}
+
+		&__contact {
+			position: absolute;
+			display: flex;
+			right: 2rem;
+			gap: 2rem;
+		}
+	}
+
+	.navigationMain {
+		position: fixed;
+		height: 8rem;
+		width: 100%;
+		top: 6rem;
+		background-color: colors.$navigation;
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 2rem;
+		z-index: 10000;
+	}
+
+	.navigationMain a {
+		color: colors.$text;
+		transition: color 0.8s ease;
+	}
+	.navigationMain a:hover {
+		color: colors.$pink;
+	}
+}

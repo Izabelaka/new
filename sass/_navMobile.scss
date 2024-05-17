@@ -1,0 +1,75 @@
+@use "./colors" as colors;
+
+@media (max-width: 767px) {
+	.navMobile {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		z-index: 10000;
+		height: 8rem;
+		background-color: rgb(141, 130, 130);
+
+		&__socials {
+			position: absolute;
+			top: 2rem;
+			right: 2rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 2rem;
+			gap: 2rem;
+			z-index: 10000;
+
+			&--style {
+				color: rgb(99, 99, 215);
+				transition: color 0.5s ease;
+			}
+		}
+	}
+
+	.navMobile__socials--style:hover,
+	.navMobile__socials--style:focus {
+		color: greenyellow;
+	}
+
+	.mobileNavigation {
+		position: relative;
+		top: 8rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		width: 100vw;
+		font-size: 2rem;
+		opacity: 0; // Dodajemy to
+		transform: translateX(-100%); // Dodajemy to
+		transition: opacity 0.5s ease, transform 0.5s ease;
+		background-color: colors.$mobileNavigationBg;
+
+		&__items {
+			display: flex;
+			flex-direction: column;
+			text-transform: uppercase;
+			gap: 4rem;
+		}
+
+		&__item a {
+			color: colors.$mainColor;
+		}
+	}
+	.navigationHidden {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@media (min-width: 768px) {
+	.navMobile {
+		display: none;
+	}
+	.mobileNavigation {
+		display: none;
+	}
+}

@@ -1,0 +1,314 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: whitesmoke;
+  background-image: linear-gradient(30deg, rgba(255, 255, 255, 0.5) 10%, transparent 10%), linear-gradient(30deg, rgba(255, 255, 255, 0.5) 20%, transparent 20%), linear-gradient(30deg, rgba(255, 255, 255, 0.5) 30%, transparent 30%), linear-gradient(30deg, rgba(255, 255, 255, 0.5) 40%, transparent 40%), linear-gradient(30deg, rgba(255, 255, 255, 0.5) 50%, transparent 50%), linear-gradient(30deg, rgba(255, 255, 255, 0.5) 60%, transparent 60%), linear-gradient(30deg, rgba(255, 255, 255, 0.5) 70%, transparent 70%), linear-gradient(30deg, rgba(255, 255, 255, 0.5) 80%, transparent 80%), linear-gradient(30deg, rgba(255, 255, 255, 0.5) 90%, transparent 90%);
+  background-size: 100px 100px;
+  background-attachment: fixed;
+  background-size: 20px 20px;
+  background-attachment: fixed;
+  line-height: 1.6;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #aec6cf;
+}
+
+h2,
+h1,
+h3 {
+  text-transform: uppercase;
+}
+
+main {
+  margin-top: 20rem;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.container {
+  margin: 0 auto;
+  height: 100vh;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: baseline;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 20rem;
+  height: 20rem;
+  background-color: #77dd77;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.text {
+  position: relative;
+  top: 10rem;
+  margin-left: 2rem;
+}
+
+.burgerBtn {
+  position: fixed;
+  left: 2rem;
+  padding: 2rem;
+  background: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  z-index: 200;
+}
+.burgerBtn:focus {
+  outline: none;
+  border: 1px solid grey;
+}
+.burgerBtn__padding {
+  position: relative;
+  transition: transform 0.5s ease;
+}
+.burgerBtn__bars {
+  background-color: black;
+  height: 5px;
+  width: 35px;
+  margin: 6px 0;
+  transition: background-color 0.8s ease-in;
+}
+.burgerBtn .burgerBtn:hover .burgerBtn__bars {
+  background-color: black;
+}
+.burgerBtn .burgerBtn:hover .burgerBtn__padding {
+  transform: rotate(90deg);
+}
+
+@media (max-width: 767px) {
+  .navMobile {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    z-index: 10000;
+    height: 8rem;
+    background-color: rgb(141, 130, 130);
+  }
+  .navMobile__socials {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    gap: 2rem;
+    z-index: 10000;
+  }
+  .navMobile__socials--style {
+    color: rgb(99, 99, 215);
+    transition: color 0.5s ease;
+  }
+  .navMobile__socials--style:hover,
+  .navMobile__socials--style:focus {
+    color: greenyellow;
+  }
+  .mobileNavigation {
+    position: relative;
+    top: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    font-size: 2rem;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    background-color: grey;
+  }
+  .mobileNavigation__items {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    gap: 4rem;
+  }
+  .mobileNavigation__item a {
+    color: whitesmoke;
+  }
+  .navigationHidden {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@media (min-width: 768px) {
+  .navMobile {
+    display: none;
+  }
+  .mobileNavigation {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .navigationDesktop {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10000;
+    height: 6rem;
+    background-color: #4a4a4a;
+    font-size: 1.5rem;
+  }
+  .navigationDesktop__socials {
+    position: absolute;
+    left: 2rem;
+    gap: 2rem;
+    display: flex;
+  }
+  .navigationDesktop__socials a:hover, .navigationDesktop__contact a:hover {
+    color: #ffb6c1;
+  }
+  .navigationDesktop__socials a, .navigationDesktop__contact a {
+    transition: color 0.8s ease;
+  }
+  .navigationDesktop__contact {
+    position: absolute;
+    display: flex;
+    right: 2rem;
+    gap: 2rem;
+  }
+  .navigationMain {
+    position: fixed;
+    height: 8rem;
+    width: 100%;
+    top: 6rem;
+    background-color: #cfcfff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2rem;
+    z-index: 10000;
+  }
+  .navigationMain a {
+    color: #4a4a4a;
+    transition: color 0.8s ease;
+  }
+  .navigationMain a:hover {
+    color: #ffb6c1;
+  }
+}
+.section {
+  position: relative;
+  width: 100%;
+}
+
+.accordion__box {
+  font-size: 2rem;
+}
+.accordion__btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem;
+  width: 100%;
+  font-size: 1.8rem;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: white;
+  background-color: #aec6cf;
+  text-transform: uppercase;
+  transition: color 0.8s ease;
+}
+.accordion__btn:hover, .accordion__btn:focus {
+  background-color: #ffb6c1;
+  color: white;
+  outline: none;
+}
+.accordion__text-box {
+  margin-left: 10px;
+  padding: 1rem 2rem;
+  display: none;
+  color: #4a4a4a;
+}
+.accordion__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+.accordion__icon__first {
+  background-color: white;
+  position: absolute;
+  height: 5px;
+  width: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.5s ease;
+}
+.accordion__icon__second {
+  background-color: white;
+  position: absolute;
+  width: 5px;
+  height: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.5s ease;
+}
+.accordion__active {
+  display: block;
+}
+
+.rotate {
+  transform: translate(-50%, -50%) rotate(90deg);
+}/*# sourceMappingURL=main.css.map */
