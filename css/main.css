@@ -311,4 +311,13 @@ h1 {
 
 .rotate {
   transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.header {
+  background-image: url("../img/people1.jpg");
+  background-size: cover;
+  background-position: 95% 35px;
+  background-attachment: scroll;
+  filter: brightness(85%);
+  height: 60rem;
 }/*# sourceMappingURL=main.css.map */
