@@ -77,7 +77,7 @@ h1 {
 .circle {
   width: 20rem;
   height: 20rem;
-  background-color: #77dd77;
+  background-color: red;
   border-radius: 50%;
   display: flex;
   justify-content: center;
