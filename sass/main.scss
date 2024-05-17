@@ -5,3 +5,12 @@
 @use "./navigationDesktop" as navigationDesktop;
 @use "./section" as section;
 @use "./accordion" as accordion;
+
+.header {
+  background-image: url("../img/people1.jpg");
+  background-size: cover;
+  background-position: 95% 35px;
+  background-attachment: scroll;
+  filter: brightness(85%);
+  height: 60rem;
+}
