@@ -13,19 +13,7 @@ html {
 
 body {
   background-color: whitesmoke;
-  background-image: linear-gradient(
-      30deg,
-      rgba(255, 255, 255, 0.5) 10%,
-      transparent 10%
-    ),
-    linear-gradient(30deg, rgba(255, 255, 255, 0.5) 20%, transparent 20%),
-    linear-gradient(30deg, rgba(255, 255, 255, 0.5) 30%, transparent 30%),
-    linear-gradient(30deg, rgba(255, 255, 255, 0.5) 40%, transparent 40%),
-    linear-gradient(30deg, rgba(255, 255, 255, 0.5) 50%, transparent 50%),
-    linear-gradient(30deg, rgba(255, 255, 255, 0.5) 60%, transparent 60%),
-    linear-gradient(30deg, rgba(255, 255, 255, 0.5) 70%, transparent 70%),
-    linear-gradient(30deg, rgba(255, 255, 255, 0.5) 80%, transparent 80%),
-    linear-gradient(30deg, rgba(255, 255, 255, 0.5) 90%, transparent 90%);
+  background-image: linear-gradient(30deg, rgba(255, 255, 255, 0.5) 10%, transparent 10%), linear-gradient(30deg, rgba(255, 255, 255, 0.5) 20%, transparent 20%), linear-gradient(30deg, rgba(255, 255, 255, 0.5) 30%, transparent 30%), linear-gradient(30deg, rgba(255, 255, 255, 0.5) 40%, transparent 40%), linear-gradient(30deg, rgba(255, 255, 255, 0.5) 50%, transparent 50%), linear-gradient(30deg, rgba(255, 255, 255, 0.5) 60%, transparent 60%), linear-gradient(30deg, rgba(255, 255, 255, 0.5) 70%, transparent 70%), linear-gradient(30deg, rgba(255, 255, 255, 0.5) 80%, transparent 80%), linear-gradient(30deg, rgba(255, 255, 255, 0.5) 90%, transparent 90%);
   background-size: 100px 100px;
   background-attachment: fixed;
   background-size: 20px 20px;
@@ -87,7 +75,7 @@ h1 {
 }
 
 .circle {
-  width: 20rem;
+  width: 50rem;
   height: 20rem;
   background-color: #77dd77;
   border-radius: 50%;
@@ -220,12 +208,10 @@ h1 {
     gap: 2rem;
     display: flex;
   }
-  .navigationDesktop__socials a:hover,
-  .navigationDesktop__contact a:hover {
+  .navigationDesktop__socials a:hover, .navigationDesktop__contact a:hover {
     color: #ffb6c1;
   }
-  .navigationDesktop__socials a,
-  .navigationDesktop__contact a {
+  .navigationDesktop__socials a, .navigationDesktop__contact a {
     transition: color 0.8s ease;
   }
   .navigationDesktop__contact {
@@ -280,8 +266,7 @@ h1 {
   text-transform: uppercase;
   transition: color 0.8s ease;
 }
-.accordion__btn:hover,
-.accordion__btn:focus {
+.accordion__btn:hover, .accordion__btn:focus {
   background-color: #ffb6c1;
   color: white;
   outline: none;
@@ -335,4 +320,4 @@ h1 {
   background-attachment: scroll;
   filter: brightness(85%);
   height: 60rem;
-} /*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
