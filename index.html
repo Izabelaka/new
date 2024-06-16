@@ -152,6 +152,29 @@
         </div>
       </section>
       <header class="header"></header>
+      <!-- 
+      --------------------------------------------------------------------
+      
+      
+      
+      -->
+
+      <div class="contact-form">
+        <h2>Formularz Kontaktowy</h2>
+        <form action="send_email.php" method="post">
+          <label for="name">Imię</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Wiadomość</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit">Wyślij</button>
+        </form>
+      </div>
+      <!-- ------------------------------------------------------------ -->
     </main>
 
     <script src="index.js" defer></script>

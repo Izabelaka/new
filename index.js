@@ -3,17 +3,17 @@ const mobileNavigation = document.querySelector(".mobileNavigation");
 const items = document.querySelector(".mobileNavigation__items");
 
 const activeNavigation = () => {
-	mobileNavigation.classList.toggle("navigationHidden");
+  mobileNavigation.classList.toggle("navigationHidden");
 
-	if (mobileNavigation.classList.contains("navigationHidden")) {
-		// Dodajemy styl 'transition', gdy menu jest aktywowane
-		items.style.transition = "opacity 1s ease 0.5s";
-		items.style.opacity = 1;
-	} else {
-		// Usuwamy styl 'transition', gdy menu jest deaktywowane
-		items.style.transition = "";
-		items.style.opacity = 0;
-	}
+  if (mobileNavigation.classList.contains("navigationHidden")) {
+    // Dodajemy styl 'transition', gdy menu jest aktywowane
+    items.style.transition = "opacity 1s ease 0.5s";
+    items.style.opacity = 1;
+  } else {
+    // Usuwamy styl 'transition', gdy menu jest deaktywowane
+    items.style.transition = "";
+    items.style.opacity = 0;
+  }
 };
 
 burgerBtn.addEventListener("click", activeNavigation);
@@ -23,38 +23,85 @@ burgerBtn.addEventListener("click", activeNavigation);
 const accordionBtns = document.querySelectorAll(".accordion__btn");
 
 function openAccordionTextBox() {
-	const textBox = this.nextElementSibling;
-	const iconSecond = this.querySelector(".accordion__icon__second");
+  const textBox = this.nextElementSibling;
+  const iconSecond = this.querySelector(".accordion__icon__second");
 
-	if (textBox.classList.contains("accordion__active")) {
-		textBox.classList.remove("accordion__active");
-		iconSecond.classList.remove("rotate");
-	} else {
-		closeAccordionTextBox();
-		textBox.classList.add("accordion__active");
-		iconSecond.classList.add("rotate");
-	}
+  if (textBox.classList.contains("accordion__active")) {
+    textBox.classList.remove("accordion__active");
+    iconSecond.classList.remove("rotate");
+  } else {
+    closeAccordionTextBox();
+    textBox.classList.add("accordion__active");
+    iconSecond.classList.add("rotate");
+  }
 }
 
 function closeAccordionTextBox() {
-	const allActiveTextboxes = document.querySelectorAll(
-		".accordion__text-box.accordion__active"
-	);
-	const allActiveIcons = document.querySelectorAll(
-		".accordion__icon__second.rotate"
-	);
+  const allActiveTextboxes = document.querySelectorAll(
+    ".accordion__text-box.accordion__active"
+  );
+  const allActiveIcons = document.querySelectorAll(
+    ".accordion__icon__second.rotate"
+  );
 
-	allActiveTextboxes.forEach((textBox) => {
-		textBox.classList.remove("accordion__active");
-	});
+  allActiveTextboxes.forEach(textBox => {
+    textBox.classList.remove("accordion__active");
+  });
 
-	allActiveIcons.forEach((icon) => {
-		icon.classList.remove("rotate");
-	});
+  allActiveIcons.forEach(icon => {
+    icon.classList.remove("rotate");
+  });
 }
 
-accordionBtns.forEach((btn) =>
-	btn.addEventListener("click", openAccordionTextBox)
+accordionBtns.forEach(btn =>
+  btn.addEventListener("click", openAccordionTextBox)
 );
 
 //////accordion end
+
+////////sidebar-accordion start
+
+const sidebarAccordionBtns = document.querySelectorAll(
+  ".sidebar-accordion__btn"
+);
+
+function openAccordionTextBox() {
+  const sidebarTextBox = this.nextElementSibling;
+  const sidebarIconSecond = this.querySelector(
+    ".sidebar-accordion__icon__second"
+  );
+
+  if (sidebarTextBox.classList.contains("sidebar-accordion__active")) {
+    sidebarTextBox.classList.remove("sidebar-accordion__active");
+    sidebarIconSecond.classList.remove("rotate");
+  } else {
+    closeAccordionTextBox();
+    sidebarTextBox.classList.add("sidebar-accordion__active");
+    sidebarIconSecond.classList.add("rotate");
+  }
+}
+
+function closeAccordionTextBox() {
+  const sidebarAllActiveTextboxes = document.querySelectorAll(
+    ".sidebar-accordion__text-box.accordion__active"
+  );
+  const sidebarAllActiveIcons = document.querySelectorAll(
+    ".sidebar-accordion__icon__second.rotate"
+  );
+
+  sidebarAllActiveTextboxes.forEach(sidebarTextBox => {
+    sidebarTextBox.classList.remove("sidebar-accordion__active");
+  });
+
+  sidebarAllActiveIcons.forEach(icon => {
+    icon.classList.remove("rotate");
+  });
+}
+
+sidebarAccordionBtns.forEach(btn =>
+  btn.addEventListener("click", openAccordionTextBox)
+);
+
+//////accordion end
+
+// --------------------------------oferta
